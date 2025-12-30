@@ -53,8 +53,8 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: loading == true ? null : onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColor.appColor,
-          shadowColor: AppColor.appColor,
+          backgroundColor: color ?? AppColors.appColor,
+          shadowColor: AppColors.appColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(radius ?? 10),
             side: isBorderEnable == true
@@ -79,8 +79,8 @@ class CustomButton extends StatelessWidget {
                         textStyle ??
                         TextStyle(
                           fontFamily: textFont ?? FontFamily.urbanist,
-                          fontSize: fontSize ?? 20,
-                          color: textColor ?? AppColor.white,
+                          fontSize: fontSize ?? 17,
+                          color: textColor ?? AppColors.white,
                           letterSpacing: 1.5,
                           fontWeight: fontWeight ?? FontWeight.w600,
                         ),

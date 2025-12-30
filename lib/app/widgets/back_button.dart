@@ -13,7 +13,7 @@ class MyBackButton extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: AppColor.transparent,
+          color: AppColors.transparent,
           borderRadius: BorderRadius.circular(10),
         ),
         margin: margin ?? EdgeInsets.only(left: 15),
@@ -21,7 +21,7 @@ class MyBackButton extends StatelessWidget {
           AppImages.arrowBack,
           width: 25,
           height: 25,
-          color:color?? AppColor.white,
+          color: color ?? AppColors.white,
         ),
       ),
     );

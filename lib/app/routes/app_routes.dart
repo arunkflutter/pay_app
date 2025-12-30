@@ -6,4 +6,5 @@ class AppRoutes {
   static const String signUpScreen = '/signUpScreen';
   static const String bottomNavbar = '/bottomNavbar';
   static const String sendMoneyScreen = '/sendMoneyScreen';
+  static const String transactionStatus = '/TransactionStatus';
 }

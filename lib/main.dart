@@ -17,7 +17,7 @@ class AlpinePayApp extends StatelessWidget with BaseClass {
         keyBoardOff(context);
       },
       child: GetMaterialApp(
-        color: AppColor.backgroundColor,
+        color: AppColors.backgroundColor,
         title: 'Alpine Pay',
         translations: AppTranslation(),
         locale: const Locale('en'),

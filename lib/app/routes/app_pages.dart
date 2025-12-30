@@ -9,5 +9,6 @@ class AppPages {
     GetPage(name: AppRoutes.signUpScreen, page: () => SignUpScreen()),
     GetPage(name: AppRoutes.bottomNavbar, page: () => BottomNavbar()),
     GetPage(name: AppRoutes.sendMoneyScreen, page: () => SendMoneyScreen()),
+    GetPage(name: AppRoutes.transactionStatus, page: () => TransactionStatus()),
   ];
 }

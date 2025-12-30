@@ -159,7 +159,7 @@ class _MyTextFieldFormState extends State<MyTextFieldForm> {
               style:
                   widget.labelStyle ??
                   theme.textTheme.bodyMedium?.copyWith(
-                    color: AppColor.textColor,
+                    color: AppColors.textColor,
                     fontWeight: FontWeight.w600,
                     fontSize: 14,
                     fontFamily: FontFamily.urbanist,
@@ -205,7 +205,7 @@ class _MyTextFieldFormState extends State<MyTextFieldForm> {
                     widget.labelStyle ??
                     theme.textTheme.bodyMedium?.copyWith(
                       fontSize: 14,
-                      color: AppColor.appColor,
+                      color: AppColors.appColor,
                       fontFamily: FontFamily.urbanist,
                     ),
                 prefixIconConstraints: const BoxConstraints(
@@ -222,7 +222,7 @@ class _MyTextFieldFormState extends State<MyTextFieldForm> {
                 fillColor:
                     widget.fillColor ??
                     theme.inputDecorationTheme.fillColor ??
-                    AppColor.greyColor,
+                    AppColors.greyColor,
                 alignLabelWithHint: true,
                 contentPadding: EdgeInsets.symmetric(
                   vertical: widget.verticalTextPadding,
@@ -255,25 +255,25 @@ class _MyTextFieldFormState extends State<MyTextFieldForm> {
                 hintText: widget.hintText,
                 disabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: widget.borderColor ?? AppColor.greyColor,
+                    color: widget.borderColor ?? AppColors.greyColor,
                   ),
                   borderRadius: BorderRadius.circular(widget.formRadius ?? 12),
                 ),
                 border: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: widget.borderColor ?? AppColor.greyColor,
+                    color: widget.borderColor ?? AppColors.greyColor,
                   ),
                   borderRadius: BorderRadius.circular(widget.formRadius ?? 12),
                 ),
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: widget.borderColor ?? AppColor.greyColor,
+                    color: widget.borderColor ?? AppColors.greyColor,
                   ),
                   borderRadius: BorderRadius.circular(widget.formRadius ?? 12),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: widget.borderColor ?? AppColor.greyColor,
+                    color: widget.borderColor ?? AppColors.greyColor,
                     width: 1.5,
                   ),
                   borderRadius: BorderRadius.circular(widget.formRadius ?? 12),

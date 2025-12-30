@@ -24,4 +24,10 @@ class AppImages {
   static const send = "$path/send.png";
   static const search = "$path/search.png";
   static const filter = "$path/filter.png";
+  static const noTransaction = "$path/no_transaction.png";
+  static const success = "$path/success.png";
+  static const failed = "$path/failed.png";
+  static const pending = "$path/pending.png";
+  static const arrowUpDown = "$path/arrow-up-down.png";
+  static const calendar = "$path/calendar.png";
 }
