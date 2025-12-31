@@ -7,4 +7,5 @@ class AppRoutes {
   static const String bottomNavbar = '/bottomNavbar';
   static const String sendMoneyScreen = '/sendMoneyScreen';
   static const String transactionStatus = '/TransactionStatus';
+  static const String editProfile = '/EditProfile';
 }

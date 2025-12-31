@@ -1,5 +1,3 @@
-import 'package:alp_pay_flutter/app/view/tabs/wallet/wallet_screen.dart';
-
 import '../../../exports.dart';
 
 class BottomNavController extends GetxController {
@@ -8,13 +6,9 @@ class BottomNavController extends GetxController {
   final pages = [
     HomeScreen(),
     HistoryScreen(),
-    Container(
-      color: Colors.green,
-    ),
+    Container(color: Colors.green),
     WalletScreen(),
-    Container(
-      color: Colors.pink,
-    ),
+    ProfileScreen(),
   ];
 
   void changeIndex(int index) {

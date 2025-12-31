@@ -46,7 +46,7 @@ class MyTextFieldForm extends StatefulWidget {
   final Widget? passwordVisibleIcon;
   final Widget? passwordInvisibleIcon;
   String? previousValue = "";
-
+  final String? labelIcon;
   MyTextFieldForm({
     super.key,
     this.onTap,
@@ -91,6 +91,7 @@ class MyTextFieldForm extends StatefulWidget {
     this.passwordInvisibleIcon,
     this.previousValue,
     this.isAutoValidate = false,
+    this.labelIcon,
   });
 
   @override
@@ -154,16 +155,24 @@ class _MyTextFieldFormState extends State<MyTextFieldForm> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (widget.showLabel && widget.label.isNotEmpty) ...[
-            Text(
-              widget.label,
-              style:
-                  widget.labelStyle ??
-                  theme.textTheme.bodyMedium?.copyWith(
-                    color: AppColors.textColor,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14,
-                    fontFamily: FontFamily.urbanist,
-                  ),
+            Row(
+              children: [
+                if (widget.labelIcon != null) ...[
+                  Image.asset(widget.labelIcon ?? "", height: 14, width: 14),
+                  SizedBox(width: 5),
+                ],
+                Text(
+                  widget.label,
+                  style:
+                      widget.labelStyle ??
+                      theme.textTheme.bodyMedium?.copyWith(
+                        color: AppColors.textColor,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                        fontFamily: FontFamily.urbanist,
+                      ),
+                ),
+              ],
             ),
             const SizedBox(height: 9),
           ],

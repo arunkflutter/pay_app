@@ -30,4 +30,15 @@ class AppImages {
   static const pending = "$path/pending.png";
   static const arrowUpDown = "$path/arrow-up-down.png";
   static const calendar = "$path/calendar.png";
+  static const bagCheck = "$path/bag-check.png";
+  static const termsCondition = "$path/contract-coverage.png";
+  static const editProfile = "$path/edit_profile.png";
+  static const imprint = "$path/info.png";
+  static const language = "$path/language.png";
+  static const logout = "$path/logout.png";
+  static const proIcon = "$path/profile_icon.png";
+  static const mail = "$path/mail.png";
+  static const close = "$path/close.png";
+  static const camera = "$path/camera.png";
+  static const gallery = "$path/gallery.png";
 }

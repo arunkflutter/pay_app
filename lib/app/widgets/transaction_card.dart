@@ -1,6 +1,6 @@
 import '../../exports.dart';
 
-class TransactionCardWidget extends StatelessWidget {
+class TransactionCardWidget extends StatelessWidget with BaseClass {
   const TransactionCardWidget({
     super.key,
     this.isCredit = false,
@@ -19,30 +19,6 @@ class TransactionCardWidget extends StatelessWidget {
   final GestureTapCallback? onTap;
   final bool isDisableBorder;
   final EdgeInsets margin;
-
-  String getInitials(String name) {
-    final parts = name.trim().split(RegExp(r'\s+'));
-
-    if (parts.isEmpty) return "";
-
-    if (parts.length == 1) {
-      return parts.first[0].toUpperCase();
-    }
-
-    return (parts[0][0] + parts[1][0]).toUpperCase();
-  }
-
-  Color getAvatarColor(String name) {
-    final colors = [
-      AppColors.appColor,
-      Colors.pinkAccent.shade200,
-      Colors.yellow,
-      Color(0xFFC78CFF),
-      Colors.greenAccent.shade200,
-      AppColors.green,
-    ];
-    return colors[name.hashCode % colors.length];
-  }
 
   @override
   Widget build(BuildContext context) {

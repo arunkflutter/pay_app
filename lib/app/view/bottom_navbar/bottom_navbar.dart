@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import '../../../exports.dart';
 
 class BottomNavbar extends StatelessWidget {
@@ -12,7 +14,7 @@ class BottomNavbar extends StatelessWidget {
           backgroundColor: Colors.white,
           body: controller.pages[controller.currentIndex],
           bottomNavigationBar: SizedBox(
-            height: 115,
+            height:Platform.isAndroid? 115:92,
             child: Stack(
               clipBehavior: Clip.none,
               children: [
@@ -51,7 +53,7 @@ class BottomNavbar extends StatelessWidget {
                       ),
                       _navItem(
                         image: "",
-                        label: 'pay',
+                        label: 'pay'.tr,
                         index: 2,
                         controller: controller,
                       ), // space for FAB
@@ -76,7 +78,7 @@ class BottomNavbar extends StatelessWidget {
                 ),
                 // Floating Pay button
                 Positioned(
-                  bottom: 76,
+                  bottom:Platform.isAndroid? 76:55,
                   left: 0,
                   right: 0,
                   child: GestureDetector(
