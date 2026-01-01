@@ -22,4 +22,6 @@ class AppColors {
   static const Color border2Color = Color(0xFFACACAC);
   static const Color border3Color = Color(0xFFDBDBDB);
   static const Color green = Color(0xFF29A63E);
+  static const Color green2 = Color(0xFF29A63E);
+  static const Color fadeGreen = Color(0xFFDEFFE8);
 }

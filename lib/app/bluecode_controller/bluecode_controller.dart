@@ -11,35 +11,35 @@ class BlueCodeController extends GetxController {
 
   /// Listen from Android for events like token, deep link, or SDK status
   void _listenFromAndroid() {
-    print("MethodChannel initialized");
+    debugPrint("MethodChannel initialized");
 
     _channel.setMethodCallHandler((call) async {
       switch (call.method) {
         case "onTokenReceived":
           final String token = call.arguments;
-          print("✅ Android se token aaya: $token");
+          debugPrint("✅ Android se token aaya: $token");
           break;
 
         case "onBluecodeDeepLinkReceived":
           final String url = call.arguments;
-          print("🌐 Deep link received: $url");
+          debugPrint("🌐 Deep link received: $url");
           break;
 
         case "onOnboardingDeepLinkReceived":
           final String url = call.arguments;
-          print("📝 Onboarding deep link: $url");
+          debugPrint("📝 Onboarding deep link: $url");
           break;
 
         case "onReceiveClaimTokenError":
-          print("❌ Claim token error from Android");
+          debugPrint("❌ Claim token error from Android");
           break;
 
         case "onSdkInitialized":
-          print("✅ SDK successfully initialized");
+          debugPrint("✅ SDK successfully initialized");
           break;
 
         default:
-          print("ℹ️ Unknown method called: ${call.method}");
+          debugPrint("ℹ️ Unknown method called: ${call.method}");
       }
     });
   }
@@ -48,9 +48,9 @@ class BlueCodeController extends GetxController {
   Future<void> requestToken() async {
     try {
       await _channel.invokeMethod("requestToken");
-      print("Token request sent to Android");
+      debugPrint("Token request sent to Android");
     } catch (e) {
-      print("❌ Error requesting token: $e");
+      debugPrint("❌ Error requesting token: $e");
     }
   }
 
@@ -63,9 +63,9 @@ class BlueCodeController extends GetxController {
         "deepLink": "",
         "isProduction": false,
       });
-      print(result ? "✅ SDK initialized" : "❌ SDK failed");
+      debugPrint(result ? "✅ SDK initialized" : "❌ SDK failed");
     } catch (e) {
-      print("❌ SDK init error: $e");
+      debugPrint("❌ SDK init error: $e");
     }
   }
 
@@ -76,9 +76,9 @@ class BlueCodeController extends GetxController {
         "sdkHost": "SAMPLEAPP",
         "appScheme": "sampleapp",
       });
-      print("SDK open requested");
+      debugPrint("SDK open requested");
     } catch (e) {
-      print("❌ Error opening SDK: $e");
+      debugPrint("❌ Error opening SDK: $e");
     }
   }
 }

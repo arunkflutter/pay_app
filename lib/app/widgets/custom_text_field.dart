@@ -1,6 +1,4 @@
 // ignore_for_file: must_be_immutable
-import 'package:flutter/services.dart';
-
 import '../../exports.dart';
 
 class MyTextFieldForm extends StatefulWidget {
@@ -209,7 +207,7 @@ class _MyTextFieldFormState extends State<MyTextFieldForm> {
               inputFormatters: _buildInputFormatters(),
               decoration: InputDecoration(
                 counterText: "",
-                label: widget.inputLabel ?? null,
+                label: widget.inputLabel,
                 labelStyle:
                     widget.labelStyle ??
                     theme.textTheme.bodyMedium?.copyWith(

@@ -1,3 +1,5 @@
+import 'package:alp_pay_flutter/app/view/tabs/transaction_page/transaction_details.dart';
+
 import '../../exports.dart';
 
 class AppPages {
@@ -11,5 +13,9 @@ class AppPages {
     GetPage(name: AppRoutes.sendMoneyScreen, page: () => SendMoneyScreen()),
     GetPage(name: AppRoutes.transactionStatus, page: () => TransactionStatus()),
     GetPage(name: AppRoutes.editProfile, page: () => EditProfile()),
+    GetPage(
+      name: AppRoutes.transactionDetails,
+      page: () => TransactionDetails(),
+    ),
   ];
 }

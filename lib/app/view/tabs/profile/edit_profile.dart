@@ -18,7 +18,7 @@ class EditProfile extends StatelessWidget {
           centerTitle: false,
           leading: MyBackButton(color: AppColors.blackDark),
           title: Text(
-            "Edit Profile",
+            "edit_profile".tr,
             style: AppTextStyles.boldUrbanist.copyWith(
               fontSize: 20,
               color: AppColors.blackDark,
@@ -76,7 +76,7 @@ class EditProfile extends StatelessWidget {
                           color: AppColors.fadeAppBlue6Color,
                         ),
                         child: Text(
-                          "Change Photo",
+                          "change_photo".tr,
                           style: AppTextStyles.semiBoldUrbanist.copyWith(
                             color: AppColors.white,
                           ),
@@ -101,9 +101,9 @@ class EditProfile extends StatelessWidget {
                       labelStyle: AppTextStyles.semiBoldUrbanist.copyWith(
                         color: AppColors.blackDark,
                       ),
-                      label: "First Name",
+                      label: "first_name".tr,
                       borderColor: AppColors.border3Color,
-                      hintText: "Name",
+                      hintText: "first_name".tr,
                       fillColor: AppColors.white,
                       controller: TextEditingController(),
                     ),
@@ -113,9 +113,9 @@ class EditProfile extends StatelessWidget {
                       labelStyle: AppTextStyles.semiBoldUrbanist.copyWith(
                         color: AppColors.blackDark,
                       ),
-                      label: "Last Name",
+                      label: "last_name".tr,
                       borderColor: AppColors.border3Color,
-                      hintText: "Last Name",
+                      hintText: "last_name".tr,
                       fillColor: AppColors.white,
                       controller: TextEditingController(),
                     ),
@@ -125,9 +125,9 @@ class EditProfile extends StatelessWidget {
                       labelStyle: AppTextStyles.semiBoldUrbanist.copyWith(
                         color: AppColors.blackDark,
                       ),
-                      label: "Email Address",
+                      label: "email_address".tr,
                       borderColor: AppColors.border3Color,
-                      hintText: "Email Address",
+                      hintText: "email_address".tr,
                       fillColor: AppColors.white,
                       controller: TextEditingController(),
                     ),
@@ -135,7 +135,7 @@ class EditProfile extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              CustomButton(text: "Save Changes", onPressed: () {}),
+              CustomButton(text: "save_changes".tr, onPressed: () {}),
             ],
           ),
         ),

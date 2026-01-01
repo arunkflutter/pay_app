@@ -14,7 +14,7 @@ class SourceDialog {
       context: context,
       barrierDismissible: false,
       barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
-      barrierColor: AppColors.blackDark.withOpacity(0.5),
+      barrierColor: AppColors.blackDark.withValues(alpha: 0.5),
       transitionDuration: const Duration(milliseconds: 150),
       transitionBuilder:
           (
@@ -74,7 +74,7 @@ class SourceDialog {
                                           MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          "Upload Image",
+                                          "upload_image".tr,
                                           style: AppTextStyles.boldUrbanist
                                               .copyWith(
                                                 color: AppColors.blackDark,
@@ -116,7 +116,7 @@ class SourceDialog {
                                                   ),
                                                   SizedBox(width: 10),
                                                   Text(
-                                                    "Camera",
+                                                    "camera".tr,
                                                     style: AppTextStyles
                                                         .semiBoldUrbanist
                                                         .copyWith(
@@ -159,9 +159,9 @@ class SourceDialog {
                                                   ),
                                                   SizedBox(width: 10),
                                                   Text(
-                                                    "Gallery",
+                                                    "gallery".tr,
                                                     style: AppTextStyles
-                                                        .semiBoldUrbanist
+                                                         .semiBoldUrbanist
                                                         .copyWith(
                                                           color:
                                                               AppColors.white,

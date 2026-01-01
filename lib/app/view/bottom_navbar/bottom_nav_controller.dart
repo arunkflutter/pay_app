@@ -1,3 +1,5 @@
+import 'package:alp_pay_flutter/app/view/tabs/scanner/scanner_screen.dart';
+
 import '../../../exports.dart';
 
 class BottomNavController extends GetxController {
@@ -6,7 +8,7 @@ class BottomNavController extends GetxController {
   final pages = [
     HomeScreen(),
     HistoryScreen(),
-    Container(color: Colors.green),
+    ScannerScreen(),
     WalletScreen(),
     ProfileScreen(),
   ];

@@ -27,6 +27,5 @@ class AlpinePayApp extends StatelessWidget with BaseClass {
         getPages: AppPages.getPages,
       ),
     );
-    ;
   }
 }

@@ -73,7 +73,7 @@ class SparkPainter extends CustomPainter {
 
     /// -------- RING EFFECT --------
     final ringPaint = Paint()
-      ..color = AppColors.appColor.withOpacity(0.25 * (1 - progress))
+      ..color = AppColors.appColor.withValues(alpha: 0.25 * (1 - progress))
       ..style = PaintingStyle.stroke
       ..strokeWidth = 3;
 
@@ -85,7 +85,7 @@ class SparkPainter extends CustomPainter {
 
     /// -------- RAY SPARKS --------
     final rayPaint = Paint()
-      ..color = AppColors.appColor.withOpacity(0.8 * (1 - progress))
+      ..color = AppColors.appColor.withValues(alpha: 0.8 * (1 - progress))
       ..strokeWidth = 2
       ..strokeCap = StrokeCap.round;
 

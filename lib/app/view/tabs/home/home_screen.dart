@@ -1,3 +1,5 @@
+import 'package:alp_pay_flutter/app/widgets/profile_show_dialog.dart';
+
 import '../../../../exports.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -50,11 +52,16 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                       const Spacer(),
-                      const NetworkImageWidget(
-                        imageUrl: "https://i.pravatar.cc/300",
-                        height: 50,
-                        width: 50,
-                        borderRadius: 1000,
+                      GestureDetector(
+                        onTap: (){
+                          showProfileDialog("https://i.pravatar.cc/300");
+                        },
+                        child: const NetworkImageWidget(
+                          imageUrl: "https://i.pravatar.cc/300",
+                          height: 50,
+                          width: 50,
+                          borderRadius: 1000,
+                        ),
                       ),
                     ],
                   ),
@@ -72,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(19),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
+                          color: Colors.black.withValues(alpha: 0.1),
                           spreadRadius: 2,
                           blurRadius: 8,
                           offset: const Offset(0, 2),
@@ -153,7 +160,7 @@ class HomeScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(19),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
+                          color: Colors.black.withValues(alpha: 0.1),
                           spreadRadius: 2,
                           blurRadius: 8,
                           offset: const Offset(0, 2),
@@ -243,6 +250,9 @@ class HomeScreen extends StatelessWidget {
                                   controller.dummyTransactions.length];
 
                           return TransactionCardWidget(
+                            onTap: () {
+                              Get.toNamed(AppRoutes.transactionDetails);
+                            },
                             name: item["name"],
                             amount: item["amount"],
                             description: item["time"],
@@ -286,7 +296,7 @@ class _ActionButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(11),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.3),
+              color: Colors.black.withValues(alpha: 0.3),
               offset: const Offset(0, 6),
               blurRadius: 5,
               spreadRadius: 0,
