@@ -14,7 +14,7 @@ class BottomNavbar extends StatelessWidget {
           backgroundColor: Colors.white,
           body: controller.pages[controller.currentIndex],
           bottomNavigationBar: SizedBox(
-            height:Platform.isAndroid? 115:92,
+            height: Platform.isAndroid ? 115 : 92,
             child: Stack(
               clipBehavior: Clip.none,
               children: [
@@ -78,7 +78,7 @@ class BottomNavbar extends StatelessWidget {
                 ),
                 // Floating Pay button
                 Positioned(
-                  bottom:Platform.isAndroid? 76:55,
+                  bottom: Platform.isAndroid ? 76 : 55,
                   left: 0,
                   right: 0,
                   child: GestureDetector(

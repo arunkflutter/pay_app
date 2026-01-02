@@ -163,12 +163,13 @@ class _MyTextFieldFormState extends State<MyTextFieldForm> {
                   widget.label,
                   style:
                       widget.labelStyle ??
-                      theme.textTheme.bodyMedium?.copyWith(
-                        color: AppColors.textColor,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 14,
-                        fontFamily: FontFamily.urbanist,
-                      ),
+                      AppTextStyles.boldUrbanist.copyWith(fontSize: 14),
+                  // theme.textTheme.bodyMedium?.copyWith(
+                  //   color: AppColors.textColor,
+                  //   fontWeight: FontWeight.w600,
+                  //   fontSize: 14,
+                  //   fontFamily: FontFamily.urbanist,
+                  // ),
                 ),
               ],
             ),
@@ -278,6 +279,18 @@ class _MyTextFieldFormState extends State<MyTextFieldForm> {
                   ),
                   borderRadius: BorderRadius.circular(widget.formRadius ?? 12),
                 ),
+                errorBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(color: Colors.red),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: widget.borderColor ?? Colors.red,
+                    width: 1.5,
+                  ),
+                  borderRadius: BorderRadius.circular(widget.formRadius ?? 12),
+                ),
+
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: widget.borderColor ?? AppColors.greyColor,

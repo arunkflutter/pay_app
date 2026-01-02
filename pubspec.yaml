@@ -37,6 +37,8 @@ dependencies:
   get: ^4.7.3
   qr_flutter: ^4.1.0
   cached_network_image: ^3.4.1
+  shake_widget_flutter: ^0.0.2
+  image_picker: ^1.2.1
 
 dev_dependencies:
   flutter_test:

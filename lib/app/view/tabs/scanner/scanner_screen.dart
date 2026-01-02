@@ -5,11 +5,6 @@ class ScannerScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Scanner'),
-      ),
-
-    );
+    return Scaffold(appBar: AppBar(title: Text('Scanner')));
   }
 }

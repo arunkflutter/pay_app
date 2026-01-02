@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       const Spacer(),
                       GestureDetector(
-                        onTap: (){
+                        onTap: () {
                           showProfileDialog("https://i.pravatar.cc/300");
                         },
                         child: const NetworkImageWidget(

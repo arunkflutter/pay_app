@@ -102,7 +102,7 @@ class ProfileScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     rowWidget(
-                      onTap: ()=>Get.toNamed(AppRoutes.editProfile),
+                      onTap: () => Get.toNamed(AppRoutes.editProfile),
                       title: "edit_profile".tr,
                       icon: AppImages.calendar,
                     ),
@@ -167,7 +167,7 @@ class ProfileScreen extends StatelessWidget {
                   ],
                 ),
                 text: "",
-                onPressed: ()=>Get.offAllNamed(AppRoutes.loginScreen),
+                onPressed: () => Get.offAllNamed(AppRoutes.loginScreen),
               ),
             ],
           ),

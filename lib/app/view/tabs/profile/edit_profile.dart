@@ -42,10 +42,17 @@ class EditProfile extends StatelessWidget {
                       height: 73,
                       width: 73,
                       decoration: BoxDecoration(
-                        color: Colors.white,
                         shape: BoxShape.circle,
+                        color: Colors.white,
+                        image: controller.profileImage != null
+                            ? DecorationImage(
+                          image: FileImage(controller.profileImage!),
+                          fit: BoxFit.cover,
+                        )
+                            : null,
                       ),
-                      child: Center(
+                      child: controller.profileImage == null
+                          ? Center(
                         child: Text(
                           controller.getInitials("John Doe"),
                           style: AppTextStyles.boldUrbanist.copyWith(
@@ -53,19 +60,25 @@ class EditProfile extends StatelessWidget {
                             fontSize: 45,
                           ),
                         ),
-                      ),
+                      )
+                          : null,
                     ),
                     SizedBox(height: 10),
                     GestureDetector(
                       onTap: () {
                         SourceDialog.commonButtonsPopUp(
                           context,
-                          onButtonTap: () {},
-                          onButton2Tap: () {},
+                          onButtonTap: () {
+                            controller.pickFromCamera();
+                          },
+                          onButton2Tap: () {
+                            controller.pickFromGallery();
+                          },
                           button1Image: AppImages.camera,
                           button2Image: AppImages.gallery,
                         );
                       },
+
                       child: Container(
                         padding: EdgeInsets.symmetric(
                           horizontal: 15,

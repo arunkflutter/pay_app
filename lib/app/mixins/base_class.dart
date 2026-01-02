@@ -45,4 +45,8 @@ mixin BaseClass {
     ];
     return colors[name.hashCode % colors.length];
   }
+
+  int getBottomNavBarHeight(BuildContext context) {
+    return (MediaQuery.of(context).padding.bottom).toInt();
+  }
 }

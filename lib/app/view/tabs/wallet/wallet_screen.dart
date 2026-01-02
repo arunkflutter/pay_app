@@ -90,8 +90,8 @@ class WalletScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 15),
                     itemCount: 25,
                     itemBuilder: (context, index) {
-                      return const TransactionCardWidget(
-                        description: "Today, 9:15 AM",
+                      return TransactionCardWidget(
+                        description: "${"today".tr}, 9:15 AM",
                         margin: EdgeInsets.only(bottom: 10),
                       );
                     },

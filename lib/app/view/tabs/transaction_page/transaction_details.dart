@@ -37,7 +37,6 @@ class TransactionDetails extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
                 /// -------- TRANSACTION SUMMARY CARD --------
                 Container(
                   padding: const EdgeInsets.all(15),
@@ -45,7 +44,6 @@ class TransactionDetails extends StatelessWidget {
                   decoration: _cardDecoration(),
                   child: Column(
                     children: [
-
                       /// User Initials Avatar
                       Container(
                         height: 73,
@@ -144,7 +142,7 @@ class TransactionDetails extends StatelessWidget {
                   child: Column(
                     children: [
                       _infoRow('from'.tr, 'Sarah Miller'),
-                      _infoRow('date'.tr, 'Today'),
+                      _infoRow('date'.tr, 'today'.tr),
                       _infoRow('time'.tr, '09:15 AM'),
                       _infoRow('transaction_id'.tr, '2'),
                       _infoRow('description'.tr, 'Lunch split'),

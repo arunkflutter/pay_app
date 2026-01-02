@@ -161,7 +161,7 @@ class SourceDialog {
                                                   Text(
                                                     "gallery".tr,
                                                     style: AppTextStyles
-                                                         .semiBoldUrbanist
+                                                        .semiBoldUrbanist
                                                         .copyWith(
                                                           color:
                                                               AppColors.white,

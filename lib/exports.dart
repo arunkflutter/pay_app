@@ -42,3 +42,4 @@ export 'package:alp_pay_flutter/app/widgets/language_drop_down.dart';
 export 'package:alp_pay_flutter/app/view/tabs/profile/edit_profile_controller.dart';
 export 'package:alp_pay_flutter/app/view/tabs/profile/edit_profile.dart';
 export 'package:alp_pay_flutter/app/view/tabs/transaction_page/transaction_details_controller.dart';
+export 'package:shake_widget_flutter/shake_widget_flutter.dart';

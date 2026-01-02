@@ -53,14 +53,25 @@ android {
         manifestPlaceholders["applicationName"] = "com.codetribe.alp_pay_flutter"
     }
 
-    buildTypes {
-        release {
-            signingConfig = signingConfigs.getByName("debug")
+    android {
+        buildTypes {
+            release {
+                signingConfig = signingConfigs.getByName("debug") // Use your actual release signingConfig
+
+                // Disable minification (R8) for testing
+                isMinifyEnabled = false
+                isShrinkResources = false
+
+                // Proguard files
+                proguardFiles(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    file("proguard-rules.pro")
+                )
+            }
         }
     }
 }
-
-flutter {
+    flutter {
     source = "../.."
 }
 
